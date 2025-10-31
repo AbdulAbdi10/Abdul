@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Abdi | Résumé</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <div class="logo">Abdul<span>Abdi</span></div>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="resume.html" class="active">Résumé</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main class="page container">
+    <h1>Résumé</h1>
+    <p>
+      You can view the résumé below or download it.
+    </p>
+    <a href="assets/Abdul-Abdi-Resume.pdf" class="btn primary" target="_blank" rel="noopener">
+      📄 Download Résumé (PDF)
+    </a>
+
+    <!-- Embedded PDF -->
+    <div class="pdf-wrapper">
+      <iframe
+        src="assets/Abdul-Abdi-Resume.pdf"
+        title="Abdul Abdi Resume"
+        frameborder="0"
+      ></iframe>
+    </div>
+
+    <div class="resume-preview">
+      <h2>Quick Profile</h2>
+      <ul>
+        <li><strong>20+ years</strong> in IT and software delivery</li>
+        <li><strong>10+ years</strong> as Lead / Senior Software Architect</li>
+        <li><strong>School Board Director</strong> – community, equity, and technology access</li>
+        <li><strong>Cloud:</strong> Microsoft Azure, governance, security</li>
+      </ul>
+      <p class="muted">
+        For full work history, certifications, and community leadership details, view the PDF above.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Abdul Abdi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
