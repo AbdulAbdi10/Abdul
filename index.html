@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdul Abdi | Home</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Optional: small style for Read More link */
+    .read-more {
+      color: #0078d4;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    #more-content {
+      display: none;
+      margin-top: 1em;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -33,11 +49,10 @@
           with over 20 years of experience in the IT industry. Over the past decade, I’ve specialized in designing scalable 
           and innovative software solutions that streamline operations and help organizations achieve meaningful results. 
           I’m passionate about solving complex challenges and leading teams that turn great ideas into lasting impact.
+          <a class="read-more" id="readMoreLink">Read more...</a>
         </p>
 
-        <p><a href="#more" class="btn ghost">Read More</a></p>
-
-        <div id="more">
+        <div id="more-content">
           <p>
             Beyond technology, I’ve spent more than 15 years as a community leader, working to strengthen collaboration, 
             support students and families, and advocate for equitable opportunities. As a School Board Director, I’m deeply 
@@ -97,10 +112,22 @@
 
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
+    const readMoreLink = document.getElementById('readMoreLink');
+    const moreContent = document.getElementById('more-content');
 
     menuToggle.addEventListener('click', () => {
       mainNav.classList.toggle('open');
       menuToggle.classList.toggle('active');
+    });
+
+    readMoreLink.addEventListener('click', function() {
+      if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+        moreContent.style.display = 'block';
+        this.textContent = 'Read less';
+      } else {
+        moreContent.style.display = 'none';
+        this.textContent = 'Read more...';
+      }
     });
   </script>
 </body>
