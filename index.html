@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Top Header / Nav -->
   <header class="site-header">
     <div class="container nav-wrapper">
       <div class="logo">Abdul<span>Abdi</span></div>
@@ -21,49 +22,48 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <!-- Left: Text content -->
-      <div class="hero-box">
-        <p class="welcome">Hi, welcome to Abdul Abdi’s site! 👋</p>
+  <!-- Hero / Intro -->
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="hero-left">
+        <p class="badge">Hi, welcome to Abdul Abdi’s site! 👋</p>
         <h1>Driving innovation across technology and education.</h1>
         <p class="lead">
-          With 20 years of experience in the IT industry, including a decade as a
-          Lead Software Architect and a significant role as a School Board
-          Director, I am passionate about driving innovation, fostering
-          collaboration, and making a positive impact in both the technology
-          and education sectors.
+          With 20 years of experience in the IT industry, including a decade as a Lead Software Architect
+          and a significant role as a School Board Director, I am passionate about driving innovation,
+          fostering collaboration, and making a positive impact in both the technology and education sectors.
         </p>
         <div class="hero-actions">
           <a href="resume.html" class="btn primary">View Résumé</a>
           <a href="contact.html" class="btn ghost">Get in Touch</a>
         </div>
       </div>
-
-      <!-- Right: Picture -->
-      <div class="hero-photo">
-        <img src="AbdulAbdi.png" alt="Photo of Abdul Abdi" />
+      <div class="hero-right">
+        <div class="photo-box">
+          <!-- put your actual file here -->
+          <img src="AbdulAbdi.jpeg" alt="Photo of Abdul Abdi" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="highlights">
-    <div class="container cards">
-      <div class="card">
+    <!-- 3 cards -->
+    <section class="feature-grid">
+      <article class="feature-card">
         <h3>Software Architecture</h3>
         <p>Enterprise solutions, Azure cloud, API design, integration, and scalable systems.</p>
-      </div>
-      <div class="card">
+      </article>
+      <article class="feature-card">
         <h3>Education & Governance</h3>
         <p>School board leadership, community engagement, equitable access to technology.</p>
-      </div>
-      <div class="card">
+      </article>
+      <article class="feature-card">
         <h3>Collaboration</h3>
         <p>Bridging IT, business, and community stakeholders to deliver real outcomes.</p>
-      </div>
-    </div>
-  </section>
+      </article>
+    </section>
+  </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-content">
       <p>© <span id="year"></span> Abdul Abdi. All rights reserved.</p>
@@ -72,11 +72,12 @@
   </footer>
 
   <script>
+    // year
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // mobile menu
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
-
     menuToggle.addEventListener('click', () => {
       mainNav.classList.toggle('open');
       menuToggle.classList.toggle('active');
