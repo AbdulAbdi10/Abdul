@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Abdi | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <div class="logo">Abdul<span>Abdi</span></div>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="resume.html">Résumé</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="welcome">Hi, welcome to Abdul Abdi’s site! 👋</p>
+      <h1>Driving innovation across technology and education.</h1>
+      <p class="lead">
+        With 20 years of experience in the IT industry, including a decade as a
+        Lead Software Architect and a significant role as a School Board
+        Director, I am passionate about driving innovation, fostering
+        collaboration, and making a positive impact in both the technology
+        and education sectors.
+      </p>
+      <div class="hero-actions">
+        <a href="resume.html" class="btn primary">View Résumé</a>
+        <a href="contact.html" class="btn ghost">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights">
+    <div class="container cards">
+      <div class="card">
+        <h3>Software Architecture</h3>
+        <p>Enterprise solutions, Azure cloud, API design, integration, and scalable systems.</p>
+      </div>
+      <div class="card">
+        <h3>Education & Governance</h3>
+        <p>School board leadership, community engagement, equitable access to technology.</p>
+      </div>
+      <div class="card">
+        <h3>Collaboration</h3>
+        <p>Bridging IT, business, and community stakeholders to deliver real outcomes.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Abdul Abdi. All rights reserved.</p>
+      <p class="small">Technology · Leadership · Education</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
