@@ -21,36 +21,46 @@
     </div>
   </header>
 
-  <main class="page container">
-    <h1>Résumé</h1>
-    <p>You can view the résumé below or download it.</p>
+  <main class="page-shell">
+    <!-- top card -->
+    <section class="resume-card container">
+      <div class="resume-head">
+        <div>
+          <h1>Résumé</h1>
+          <p class="muted">
+            20+ years in IT, 10+ years leading software architecture, and current School Board Director.
+          </p>
+        </div>
+        <div>
+          <a href="ABDUL_RESUME_1.pdf" class="btn primary" target="_blank" rel="noopener">
+            📄 Download Résumé (PDF)
+          </a>
+        </div>
+      </div>
 
-    <!-- uses your file in the same folder -->
-    <a href="ABDUL_RESUME_1.pdf" class="btn primary" target="_blank" rel="noopener">
-      📄 Download Résumé (PDF)
-    </a>
+      <!-- big PDF box -->
+      <div class="pdf-wrapper large">
+        <iframe
+          src="ABDUL_RESUME_1.pdf"
+          title="Abdul Abdi Resume"
+          frameborder="0"
+        ></iframe>
+      </div>
 
-    <!-- Embedded PDF -->
-    <div class="pdf-wrapper">
-      <iframe
-        src="ABDUL_RESUME_1.pdf"
-        title="Abdul Abdi Resume"
-        frameborder="0"
-      ></iframe>
-    </div>
-
-    <div class="resume-preview">
-      <h2>Quick Profile</h2>
-      <ul>
-        <li><strong>20+ years</strong> in IT and software delivery</li>
-        <li><strong>10+ years</strong> as Lead / Senior Software Architect</li>
-        <li><strong>School Board Director</strong> – community, equity, and technology access</li>
-        <li><strong>Cloud:</strong> Microsoft Azure, governance, security</li>
-      </ul>
-      <p class="muted">
-        For full work history, certifications, and community leadership details, view the PDF above.
-      </p>
-    </div>
+      <!-- quick profile -->
+      <div class="resume-preview">
+        <h2>Quick Profile</h2>
+        <ul>
+          <li><strong>20+ years</strong> in IT and software delivery</li>
+          <li><strong>10+ years</strong> as Lead / Senior Software Architect</li>
+          <li><strong>School Board Director</strong> – community, equity, and technology access</li>
+          <li><strong>Cloud:</strong> Microsoft Azure, governance, security</li>
+        </ul>
+        <p class="muted">
+          For full work history, certifications, and community leadership details, see the PDF above.
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
