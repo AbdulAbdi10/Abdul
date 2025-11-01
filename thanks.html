@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Abdul Abdi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact-style.css" />
+  <style>
+    .thankyou-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 140px);
+      text-align: center;
+      background: #f8fafc;
+      padding: 2rem;
+    }
+
+    .thankyou-box {
+      background: #ffffff;
+      padding: 3rem 2.5rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+      max-width: 600px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .thankyou-box h1 {
+      font-size: 2rem;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+
+    .thankyou-box p {
+      color: #475569;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+
+    .thankyou-box a {
+      display: inline-block;
+      background: linear-gradient(135deg, #0ea5e9, #0369a1);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      transition: box-shadow 0.15s ease-in-out, transform 0.1s ease-in-out;
+    }
+
+    .thankyou-box a:hover {
+      box-shadow: 0 12px 25px rgba(3, 105, 161, 0.3);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <div class="logo">Abdul<span>Abdi</span></div>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Résumé</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main class="thankyou-container">
+    <div class="thankyou-box">
+      <h1>Thank You!</h1>
+      <p>Your message has been successfully sent. I’ll get back to you as soon as possible.</p>
+      <a href="index.html">Return to Home</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Abdul Abdi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
