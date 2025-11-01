@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdul Abdi | Contact</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact-style.css" />
 </head>
 <body>
   <header class="site-header">
@@ -21,35 +22,43 @@
     </div>
   </header>
 
-  <main class="page container">
-    <h1>Contact</h1>
-    <p>Please fill out the form below and I will get back to you as soon as possible.</p>
+  <main class="contact-page">
+    <div class="contact-wrapper">
+      <div class="contact-header">
+        <h1>Contact Abdul</h1>
+        <p>Have a question about technology, school board work, or community projects? Send me a message below.</p>
+      </div>
 
-    <form class="contact-form contact-form-clean">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Your Name <span class="req">*</span></label>
-          <input id="name" name="name" type="text" required placeholder="e.g. John Doe" />
+      <!-- mailto version -->
+      <form class="contact-form-box"
+            action="mailto:aabdi10@gmail.com"
+            method="post"
+            enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name <span>*</span></label>
+            <input id="name" name="Name" type="text" required placeholder="e.g. Sarah Mohamed" />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email <span>*</span></label>
+            <input id="email" name="Email" type="email" required placeholder="you@example.com" />
+          </div>
         </div>
+
         <div class="form-group">
-          <label for="email">Your Email <span class="req">*</span></label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+          <label for="subject">Subject <span>*</span></label>
+          <input id="subject" name="Subject" type="text" required placeholder="Board, tech, or community topic" />
         </div>
-      </div>
 
-      <div class="form-group">
-        <label for="subject">Subject <span class="req">*</span></label>
-        <input id="subject" name="subject" type="text" required placeholder="Board, tech, or community topic" />
-      </div>
+        <div class="form-group">
+          <label for="message">Your Message <span>*</span></label>
+          <textarea id="message" name="Message" rows="6" required placeholder="Tell me how I can help..."></textarea>
+        </div>
 
-      <div class="form-group">
-        <label for="message">Your Message <span class="req">*</span></label>
-        <textarea id="message" name="message" rows="5" required placeholder="Tell me how I can help..."></textarea>
-      </div>
-
-      <button type="submit" class="btn primary">Send Message</button>
-      <p class="muted small-top">Your information will be kept confidential.</p>
-    </form>
+        <button type="submit" class="btn-submit">Send Message</button>
+        <p class="form-footnote">Your information will be kept confidential.</p>
+      </form>
+    </div>
   </main>
 
   <footer class="site-footer">
