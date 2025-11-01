@@ -4,9 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdul Abdi | Résumé</title>
+
+  <!-- Main global site style -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Resume-specific style -->
+  <link rel="stylesheet" href="style-resume.css" />
 </head>
-<body>
+
+<body class="resume-page">
+  <!-- Header -->
   <header class="site-header">
     <div class="container nav-wrapper">
       <div class="logo">Abdul<span>Abdi</span></div>
@@ -21,8 +28,8 @@
     </div>
   </header>
 
+  <!-- Resume Page Content -->
   <main class="page-shell">
-    <!-- top card -->
     <section class="resume-card container">
       <div class="resume-head">
         <div>
@@ -38,43 +45,43 @@
         </div>
       </div>
 
-      <!-- big PDF box -->
+      <!-- Embedded PDF viewer -->
       <div class="pdf-wrapper large">
         <iframe
           src="ABDUL_RESUME_1.pdf"
-          title="Abdul Abdi Resume"
+          title="Abdul Abdi Résumé"
           frameborder="0"
         ></iframe>
       </div>
 
-      <!-- quick profile -->
+      <!-- Quick Profile Summary -->
       <div class="resume-preview">
         <h2>Quick Profile</h2>
         <ul>
           <li><strong>20+ years</strong> in IT and software delivery</li>
           <li><strong>10+ years</strong> as Lead / Senior Software Architect</li>
           <li><strong>School Board Director</strong> – community, equity, and technology access</li>
-          <li><strong>Cloud:</strong> Microsoft Azure, governance, security</li>
+          <li><strong>Cloud Expertise:</strong> Microsoft Azure, governance, and security</li>
         </ul>
         <p class="muted">
-          For full work history, certifications, and community leadership details, see the PDF above.
+          For full work history, certifications, and community leadership details, view the PDF above.
         </p>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-content">
       <p>© <span id="year"></span> Abdul Abdi. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
-
     menuToggle.addEventListener('click', () => {
       mainNav.classList.toggle('open');
       menuToggle.classList.toggle('active');
